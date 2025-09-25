@@ -9,60 +9,133 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4; /* Body background light gray */
+      color: #333; /* Default text color */
+      line-height: 1.6;
     }
+
     header {
-      background: #333;
-      color: #fff;
+      background: #222; /* Dark background */
+      color: #ffcc00;   /* Title golden */
       padding: 20px;
       text-align: center;
     }
+
+    header h1 {
+      color: #ffcc00; /* Title text golden */
+      margin: 0;
+    }
+
+    header p {
+      color: #fff; /* Sub-title white */
+      margin: 5px 0 0;
+    }
+
     nav {
       background: #444;
       padding: 10px;
       text-align: center;
     }
+
     nav a {
-      color: #fff;
+      color: #ffcc00; /* Menu links golden */
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     .hero {
       background: url('construction.jpg') no-repeat center center/cover;
-      color: white;
+      color: #fff;
       height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2em;
+      font-size: 1.8em;
       font-weight: bold;
-      text-shadow: 2px 2px 5px black;
-    }
-    section {
-      padding: 40px;
       text-align: center;
+      text-shadow: 2px 2px 5px black;
+      padding: 0 10px;
     }
-    .services {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: #f4f4f4;
-      padding: 20px;
-      margin: 10px;
-      width: 250px;
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      background: #fff; /* white background for content */
+      margin: 20px auto;
+      max-width: 1000px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
+    h2 {
+      color: #0066cc; /* Section title blue */
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: #f9f9f9;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .projects img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .projects img:hover {
+      transform: scale(1.05);
+    }
+
     footer {
-      background: #333;
-      color: #fff;
+      background: #222;
+      color: #ffcc00; /* Golden footer text */
       text-align: center;
       padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+      .projects img {
+        width: 100%;
+        height: auto;
+      }
+      section {
+        margin: 10px;
+      }
     }
   </style>
 </head>
@@ -86,7 +159,7 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>எங்களது கட்டுமான நிறுவனம் 20 வருடங்களுக்கு மேலாக வீடுகள், வணிக வளாகங்கள் மற்றும் சாலைகள் போன்றவற்றில் தரமான பணிகளை செய்து வருகிறது.</p>
+    <p>எங்களது நிறுவனம் கடந்த 20 ஆண்டுகளாக வீடுகள், வணிக வளாகங்கள், சாலைகள், பாலங்கள் போன்றவற்றில் தரமான கட்டுமான பணிகளை செய்து வருகிறது. நம்பிக்கையும் தரமும் எங்களின் அடிப்படை اصولம்.</p>
   </section>
 
   <section id="services">
@@ -102,21 +175,26 @@
       </div>
       <div class="card">
         <h3>Road & Bridges</h3>
-        <p>நிலையான சாலை மற்றும் பாலங்கள் கட்டுமானத்தில் அனுபவம்.</p>
+        <p>நிலையான சாலைகள் மற்றும் பாலங்கள் கட்டுமானத்தில் அனுபவம்.</p>
       </div>
     </div>
   </section>
 
   <section id="projects">
     <h2>Recent Projects</h2>
-    <p>📷 Project Photos இங்கே வைக்கலாம்.</p>
+    <div class="projects">
+      <img src="project1.jpg" alt="Project 1">
+      <img src="project2.jpg" alt="Project 2">
+      <img src="project3.jpg" alt="Project 3">
+      <img src="project4.jpg" alt="Project 4">
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
     <p>📞 Phone: +91 9094943343</p>
-    <p>✉ Email:manisubramanicivil@gmail.com </p>
-    <p>🏢 Address: SELLAM NAGAR. TRICHY TO CHENNAI NH ROAD, VEPPUR  CUDDALORE - 606304</p>
+    <p>✉ Email: manisubramanicivil@gmail.com</p>
+    <p>🏢 Address: SELLAM NAGAR, TRICHY TO CHENNAI NH ROAD, VEPPUR, CUDDALORE - 606304</p>
   </section>
 
   <footer>
